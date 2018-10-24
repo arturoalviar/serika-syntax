@@ -1,7 +1,7 @@
 {
   "name": "serika-syntax",
   "theme": "syntax",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A dark theme with yellow accents based off the GMK Serika keycap set",
   "keywords": [
     "syntax",
