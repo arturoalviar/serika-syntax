@@ -1,0 +1,79 @@
+atom-text-editor {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+  .scroll-view {
+    padding-left: 1rem;
+  }
+
+  .wrap-guide {
+    background-color: @syntax-wrap-guide-color;
+  }
+
+  .indent-guide {
+    color: @syntax-indent-guide-color;
+  }
+
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
+  .gutter {
+    background-color: @syntax-gutter-background-color;
+    color: @syntax-gutter-text-color;
+    .line-number {
+      opacity: 1;
+      transition: color .275s ease-in-out;
+      &.cursor-line {
+        background-color: @syntax-gutter-background-color-selected;
+        color: @syntax-gutter-text-color-selected;
+        font-weight: bold;
+      }
+
+      &.cursor-line-no-selection {
+        color: @syntax-gutter-text-color-selected;
+      }
+    }
+  }
+
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    background-color: @main;
+    color: @black;
+  }
+
+  .invisible {
+    color: @syntax-invisible-character-color;
+  }
+
+  .cursor {
+    color: @syntax-cursor-color;
+  }
+
+  .line {
+    position: relative;
+    &.cursor-line {
+      background-color: lighten(@black, 15%);
+    }
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
+  }
+
+  .highlight {
+    &.find-result {
+      .region {
+        background-color: @syntax-selection-color;
+        border-radius: 3px;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+// Mini editor
+
+atom-text-editor[mini] .scroll-view {
+  padding-left: 1px;
+}

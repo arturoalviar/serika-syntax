@@ -1,0 +1,234 @@
+// Syntax styles
+
+.syntax--comment {
+  color: @syntax-comment-color;
+}
+
+.syntax--keyword {
+  color: @main;
+
+  &.syntax--control {
+    color: @main;
+  }
+
+  &.syntax--operator {
+    color: @main;
+    &.syntax--assignment {
+      color: @second;
+    }
+  }
+
+  &.syntax--other.syntax--special-method {
+    color: @main;
+  }
+
+  &.syntax--other.syntax--unit {
+    color: @main;
+  }
+}
+
+.syntax--storage {
+  color: @main;
+}
+
+.syntax--constant {
+  color: @second;
+
+  &.syntax--character.syntax--escape {
+    color: @main;
+  }
+
+  &.syntax--numeric {
+    color: @main;
+  }
+
+  &.syntax--other.syntax--color {
+    color: @second;
+  }
+
+  &.syntax--other.syntax--symbol {
+    color: @second;
+  }
+}
+
+.syntax--variable {
+  color: @main;
+
+  &.syntax--interpolation {
+    color: @second;
+  }
+
+  &.syntax--parameter.syntax--function {
+    color: @main;
+  }
+  &.syntax--object {
+    color: @main;
+  }
+  &.syntax--default {
+    color: @main;
+  }
+}
+
+.syntax--invalid.syntax--illegal {
+  background-color: @red;
+  color: @white;
+}
+
+.syntax--string {
+  color: @second;
+
+  &.syntax--punctuation.syntax--definition {
+    color: @second;
+  }
+
+  &.syntax--regexp {
+    color: @second;
+
+    .syntax--source.syntax--ruby.syntax--embedded {
+      color: @second;
+    }
+  }
+
+  &.syntax--other.syntax--link {
+    border-bottom: 2px solid @main;
+    color: @main;
+  }
+
+  .indent-guide {
+    background-color: @syntax-background-color;
+  }
+}
+
+.syntax--punctuation {
+  &.syntax--definition {
+    &.syntax--variable,
+    &.syntax--parameters,
+    &.syntax--array {
+      color: @syntax-text-color;
+    }
+
+    &.syntax--heading,
+    &.syntax--identity {
+      color: @main;
+    }
+
+    &.syntax--bold {
+      color: @main;
+      font-weight: bold;
+    }
+
+    &.syntax--italic {
+      color: @second;
+      font-style: italic;
+    }
+  }
+}
+
+.syntax--support {
+  &.syntax--class {
+    color: @second;
+  }
+
+  &.syntax--function  {
+    color: @main;
+
+    &.syntax--any-method {
+      color: @main;
+    }
+  }
+  &.syntax--type {
+    color: @second;
+  }
+}
+
+.syntax--entity {
+  &.syntax--name.syntax--function {
+    color: @main;
+  }
+  &.syntax--name.syntax--type {
+    color: inherit;
+  }
+
+  &.syntax--other.syntax--inherited-class {
+    color: @main;
+  }
+  &.syntax--name.syntax--class, &.syntax--name.syntax--type.syntax--class {
+    color: @second;
+  }
+
+  &.syntax--name.syntax--section {
+    color: @main;
+  }
+
+  &.syntax--other.syntax--attribute-name {
+    color: @main;
+
+    &.syntax--id {
+      color: @main;
+    }
+  }
+}
+
+.syntax--meta {
+  &.syntax--class {
+    color: @second;
+  }
+
+  &.syntax--link {
+    color: @second;
+  }
+
+  &.syntax--require {
+    color: @main;
+  }
+
+  &.syntax--selector {
+    color: @second;
+  }
+
+  &.syntax--separator {
+    color: @syntax-text-color;
+  }
+}
+
+.syntax--none {
+  color: @syntax-text-color;
+}
+
+.syntax--markup {
+  &.syntax--changed {
+    color: @orange;
+  }
+
+  &.syntax--deleted {
+    color: @red;
+  }
+
+  &.syntax--heading {
+    color: @main;
+    .syntax--punctuation.syntax--definition.syntax--heading {
+     color: @green;
+    }
+  }
+
+  &.syntax--inserted {
+    color: @green;
+  }
+
+  &.syntax--list {
+    color: @pink;
+  }
+
+  &.syntax--quote {
+    color: @orange;
+  }
+
+  &.syntax--link {
+    border-bottom: 2px solid @main;
+  }
+
+  &.syntax--raw,
+  &.syntax--code {
+    color: @second;
+  }
+}
